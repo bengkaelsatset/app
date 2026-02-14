@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>BENGKAEL SATSET</title>
+    <title>BENGKAEL SATSET - Official Link</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -129,8 +129,12 @@
                     <div class="relative inline-block group">
                         <div class="absolute -inset-1 bg-gradient-to-r from-brand to-accent rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
                         <div class="relative w-28 h-28 bg-dark-800 rounded-full p-1 border-2 border-dark-700 overflow-hidden flex items-center justify-center">
-                            <!-- Logo Bengkel -->
-                            <i class="fas fa-wrench text-5xl text-gray-600"></i>
+                            <!-- Logo Bengkel (Diganti dari Icon ke Image) -->
+                            <!-- Pastikan file 'logo.png' sudah diupload ke GitHub di folder yang sama -->
+                            <img src="./bengkael_logo.png" alt="Logo Bengkel" class="w-full h-full object-cover rounded-full">
+                            
+                            <!-- Kode Lama (Icon) - Dihapus atau dikomentari -->
+                            <!-- <i class="fas fa-wrench text-5xl text-gray-600"></i> -->
                         </div>
                         <div class="absolute bottom-1 right-1 bg-green-500 border-2 border-dark-900 w-6 h-6 rounded-full flex items-center justify-center" title="Buka">
                             <i class="fas fa-check text-[10px] text-white"></i>
@@ -138,15 +142,16 @@
                     </div>
                     <div>
                         <!-- BRAND NAME UPDATE -->
-                        <h1 class="text-3xl font-bold text-white tracking-tight font-display">BENG<span class="text-gradient">KAEL</span></h1>
+                        <h1 class="text-3xl font-bold text-white tracking-tight font-display">BENGKAEL <span class="text-gradient">SATSET</span></h1>
                         <p class="text-gray-400 text-sm mt-1">Professional Auto Care & Service</p>
                     </div>
                     
                     <!-- Social Icons -->
                     <div class="flex justify-center gap-4 pt-2">
-                        <a href="#" class="w-10 h-10 rounded-full bg-dark-800 flex items-center justify-center text-gray-400 hover:bg-brand hover:text-white transition shadow-lg hover:shadow-brand/50"><i class="fab fa-instagram text-lg"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-dark-800 flex items-center justify-center text-gray-400 hover:bg-green-600 hover:text-white transition shadow-lg hover:shadow-green-600/50"><i class="fab fa-whatsapp text-lg"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-dark-800 flex items-center justify-center text-gray-400 hover:bg-blue-600 hover:text-white transition shadow-lg hover:shadow-blue-600/50"><i class="fab fa-facebook-f text-lg"></i></a>
+                        <a href="https://instagram.com" target="_blank" class="w-10 h-10 rounded-full bg-dark-800 flex items-center justify-center text-gray-400 hover:bg-brand hover:text-white transition shadow-lg hover:shadow-brand/50"><i class="fab fa-instagram text-lg"></i></a>
+                        <!-- Updated WA Link -->
+                        <a href="https://wa.me/6283806493735" target="_blank" class="w-10 h-10 rounded-full bg-dark-800 flex items-center justify-center text-gray-400 hover:bg-green-600 hover:text-white transition shadow-lg hover:shadow-green-600/50"><i class="fab fa-whatsapp text-lg"></i></a>
+                        <a href="https://facebook.com" target="_blank" class="w-10 h-10 rounded-full bg-dark-800 flex items-center justify-center text-gray-400 hover:bg-blue-600 hover:text-white transition shadow-lg hover:shadow-blue-600/50"><i class="fab fa-facebook-f text-lg"></i></a>
                     </div>
                 </div>
 
@@ -164,25 +169,34 @@
                         </div>
                     </button>
 
+                    <!-- Status Service Button (New) -->
+                    <button onclick="openModal('modal-status-check')" class="w-full glass-card bg-dark-800/50 hover:bg-dark-800 text-white font-medium py-4 px-6 rounded-2xl transition transform hover:scale-[1.02] active:scale-95 flex items-center justify-between group border border-accent/20">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-dark-700 p-2 rounded-lg text-accent"><i class="fas fa-search"></i></span>
+                            <span>Cek Status Service</span>
+                        </div>
+                        <i class="fas fa-arrow-right -rotate-45 opacity-0 group-hover:opacity-100 group-hover:rotate-0 transition"></i>
+                    </button>
+
                     <!-- Catalog Button -->
                     <button onclick="openModal('modal-public-catalog')" class="w-full glass-card hover:bg-dark-800 text-white font-medium py-4 px-6 rounded-2xl transition transform hover:scale-[1.02] active:scale-95 flex items-center justify-between group">
                         <div class="flex items-center gap-3">
-                            <span class="bg-dark-700 p-2 rounded-lg text-accent"><i class="fas fa-list-ul"></i></span>
+                            <span class="bg-dark-700 p-2 rounded-lg text-blue-400"><i class="fas fa-list-ul"></i></span>
                             <span>Lihat Katalog & Harga</span>
                         </div>
                         <i class="fas fa-arrow-right -rotate-45 opacity-0 group-hover:opacity-100 group-hover:rotate-0 transition"></i>
                     </button>
 
-                    <!-- NEW: Profil Mekanik Button -->
+                    <!-- Mekanik Button (Renamed) -->
                     <button onclick="openModal('modal-public-mechanics')" class="w-full glass-card hover:bg-dark-800 text-white font-medium py-4 px-6 rounded-2xl transition transform hover:scale-[1.02] active:scale-95 flex items-center justify-between group">
                         <div class="flex items-center gap-3">
                             <span class="bg-dark-700 p-2 rounded-lg text-green-500"><i class="fas fa-users-gear"></i></span>
-                            <span>Profil Mekanik</span>
+                            <span>Mekanik</span>
                         </div>
                         <i class="fas fa-arrow-right -rotate-45 opacity-0 group-hover:opacity-100 group-hover:rotate-0 transition"></i>
                     </button>
 
-                    <!-- NEW: Testimoni Button -->
+                    <!-- Testimoni Button -->
                     <button onclick="openModal('modal-testimony')" class="w-full glass-card hover:bg-dark-800 text-white font-medium py-4 px-6 rounded-2xl transition transform hover:scale-[1.02] active:scale-95 flex items-center justify-between group">
                         <div class="flex items-center gap-3">
                             <span class="bg-dark-700 p-2 rounded-lg text-yellow-400"><i class="fas fa-star"></i></span>
@@ -194,7 +208,7 @@
                     <!-- Location Button -->
                     <a href="https://maps.google.com" target="_blank" class="w-full glass-card hover:bg-dark-800 text-white font-medium py-4 px-6 rounded-2xl transition transform hover:scale-[1.02] active:scale-95 flex items-center justify-between group">
                         <div class="flex items-center gap-3">
-                            <span class="bg-dark-700 p-2 rounded-lg text-blue-400"><i class="fas fa-map-marked-alt"></i></span>
+                            <span class="bg-dark-700 p-2 rounded-lg text-gray-400"><i class="fas fa-map-marked-alt"></i></span>
                             <span>Lokasi Bengkel</span>
                         </div>
                         <i class="fas fa-external-link-alt text-xs opacity-50"></i>
@@ -206,7 +220,7 @@
                     <button onclick="openModal('modal-login')" class="text-xs text-gray-500 hover:text-brand transition flex items-center justify-center gap-2 mx-auto py-2 px-4 rounded-full hover:bg-dark-800">
                         <i class="fas fa-user-lock"></i> Staff Login Area
                     </button>
-                    <p class="text-[10px] text-gray-600 mt-4 font-mono">Powered by BENGKAEL System v4.1</p>
+                    <p class="text-[10px] text-gray-600 mt-4 font-mono">Powered by BENGKAEL SATSET v4.3</p>
                 </div>
 
             </div>
@@ -218,18 +232,17 @@
     <!-- 2. STAFF DASHBOARD (HIDDEN)                -->
     <!-- ========================================== -->
     <div id="app-staff" class="flex flex-col md:flex-row h-full w-full hidden opacity-0 transition-opacity duration-500 bg-dark-950 absolute inset-0 z-40">
-        
+        <!-- (Code remains same as previous version) -->
         <!-- Sidebar (Desktop) -->
         <aside class="hidden md:flex w-72 bg-dark-900 border-r border-dark-800 flex-col shrink-0">
             <div class="h-20 flex items-center px-8 border-b border-dark-800 gap-3">
                 <div class="w-8 h-8 bg-brand rounded-lg flex items-center justify-center text-white font-bold"><i class="fas fa-wrench"></i></div>
-                <!-- BRAND NAME UPDATE -->
-                <h1 class="font-display font-bold text-xl text-white tracking-wide">BENG<span class="text-brand">KAEL</span></h1>
+                <h1 class="font-display font-bold text-xl text-white tracking-wide">BENGKAEL <span class="text-brand">SATSET</span></h1>
             </div>
 
             <div class="p-6">
                 <div class="bg-dark-800 rounded-xl p-4 border border-dark-700 flex items-center gap-3 mb-8 shadow-lg">
-                    <img src="bengkael_logo.jpeg" class="w-10 h-10 rounded-lg">
+                    <img src="https://ui-avatars.com/api/?name=Admin&background=FF3B30&color=fff" class="w-10 h-10 rounded-lg">
                     <div class="overflow-hidden">
                         <div class="text-[10px] text-gray-400 uppercase tracking-wider">Logged in as</div>
                         <div class="text-sm font-bold text-white truncate" id="user-display-name">Administrator</div>
@@ -462,6 +475,34 @@
             <button onclick="closeModals()" class="w-full text-gray-500 text-xs mt-4 py-2 hover:text-white">Tutup</button>
         </div>
 
+        <!-- NEW: STATUS CHECK MODAL -->
+        <div id="modal-status-check" class="hidden w-full max-w-sm bg-dark-900 border border-dark-800 rounded-2xl p-6 shadow-2xl transform scale-95 transition-transform duration-300">
+            <div class="text-center mb-6">
+                <div class="w-12 h-12 bg-dark-800 rounded-full flex items-center justify-center mx-auto mb-3 text-accent text-xl border border-dark-700"><i class="fas fa-search"></i></div>
+                <h2 class="text-xl font-bold text-white">Cek Status Service</h2>
+                <p class="text-gray-500 text-xs">Masukkan Kode Booking Anda</p>
+            </div>
+            <form onsubmit="handleStatusCheck(event)" class="space-y-4">
+                <input type="text" id="status-code-input" placeholder="Kode (Contoh: BK-1001)" class="w-full bg-dark-950 border border-dark-700 rounded-xl px-4 py-3 text-white text-center font-mono text-lg uppercase focus:border-accent outline-none">
+                <button type="submit" class="w-full bg-accent hover:bg-accent-glow text-dark-950 font-bold py-3 rounded-xl transition shadow-lg shadow-accent/20">CEK SEKARANG</button>
+            </form>
+            
+            <!-- Result Area -->
+            <div id="status-result" class="hidden mt-6 p-4 bg-dark-950 rounded-xl border border-dark-800 text-center animate-fade-in">
+                <div class="text-xs text-gray-500 uppercase tracking-widest mb-1">Status Pengerjaan</div>
+                <div class="text-lg font-bold text-white mb-3" id="result-status">Sedang Dikerjakan</div>
+                <div class="grid grid-cols-2 gap-2 text-xs text-left border-t border-dark-800 pt-3">
+                    <div class="text-gray-500">Pemilik:</div><div class="text-white text-right" id="result-name">-</div>
+                    <div class="text-gray-500">Motor:</div><div class="text-white text-right" id="result-motor">-</div>
+                    <div class="text-gray-500">Mekanik:</div><div class="text-white text-right" id="result-mech">-</div>
+                    <div class="text-gray-500">Estimasi:</div><div class="text-accent text-right" id="result-est">-</div>
+                </div>
+            </div>
+            <div id="status-error" class="hidden mt-4 text-red-500 text-xs text-center">Kode tidak ditemukan. Silakan periksa kembali.</div>
+
+            <button onclick="closeModals()" class="w-full text-gray-500 text-xs mt-4 py-2 hover:text-white">Tutup</button>
+        </div>
+
         <!-- 3. PUBLIC CATALOG MODAL -->
         <div id="modal-public-catalog" class="hidden w-full max-w-md bg-dark-900 border border-dark-800 rounded-2xl p-0 shadow-2xl overflow-hidden h-[70vh] flex flex-col transform scale-95 transition-transform duration-300">
             <div class="p-4 border-b border-dark-800 flex justify-between items-center bg-dark-950">
@@ -561,28 +602,39 @@
                 {name: "Siti Aminah", text: "Harga transparan, tidak ada biaya tambahan aneh-aneh. Recommended!", rating: 5},
                 {name: "Doni Pratama", text: "Tempat bersih, ada ruang tunggu nyaman. Pengerjaan rapi.", rating: 4},
                 {name: "Rudi Hartono", text: "Service CVT mantap, tarikan motor jadi enteng banget.", rating: 5}
+            ],
+            // Dummy Data for Service Status Check
+            activeServices: [
+                {code: "BK-1001", name: "Asep Surasep", motor: "Vario 150", status: "Sedang Dikerjakan", mech: "Kaelani", estimasi: "14:30"},
+                {code: "BK-1002", name: "Budi Santoso", motor: "Nmax 155", status: "Menunggu Antrian", mech: "-", estimasi: "-"},
+                {code: "BK-1003", name: "Citra Lestari", motor: "Beat ESP", status: "Selesai", mech: "Rohit", estimasi: "Siap Diambil"}
             ]
         };
         let cart = [];
         let bookingData = {};
 
+        // WA CONFIG
+        const WA_NUMBER = "6283806493735";
+
         // MODAL SYSTEM
         function openModal(id) {
             document.getElementById('modal-overlay').classList.remove('hidden');
             // Hide all inner modals first
-            ['modal-login', 'modal-booking-form', 'modal-public-catalog', 'modal-public-mechanics', 'modal-testimony', 'modal-booking-success', 'modal-checkout'].forEach(m => {
-                document.getElementById(m).classList.add('hidden');
+            ['modal-login', 'modal-booking-form', 'modal-status-check', 'modal-public-catalog', 'modal-public-mechanics', 'modal-testimony', 'modal-booking-success', 'modal-checkout'].forEach(m => {
+                const el = document.getElementById(m);
+                if(el) el.classList.add('hidden');
             });
             // Show target
             const target = document.getElementById(id);
-            target.classList.remove('hidden');
-            
-            // Animation
-            setTimeout(() => {
-                document.getElementById('modal-overlay').classList.remove('opacity-0');
-                target.classList.remove('scale-95');
-                target.classList.add('scale-100');
-            }, 10);
+            if(target) {
+                target.classList.remove('hidden');
+                // Animation
+                setTimeout(() => {
+                    document.getElementById('modal-overlay').classList.remove('opacity-0');
+                    target.classList.remove('scale-95');
+                    target.classList.add('scale-100');
+                }, 10);
+            }
 
             if(id === 'modal-public-catalog') renderPublicCatalog();
             if(id === 'modal-public-mechanics') renderPublicMechanics();
@@ -821,20 +873,62 @@
             e.preventDefault();
             const n = document.getElementById('cust-name').value;
             const s = document.getElementById('cust-service').value;
+            const m = document.getElementById('cust-motor').value;
             const code = 'BK-'+Math.floor(1000+Math.random()*9000);
             bookingData = {code, name:n, srv:s};
+            
+            // Simpan ke dummy DB agar bisa dicek
+            DB.activeServices.push({
+                code: code,
+                name: n,
+                motor: m,
+                status: "Menunggu Antrian",
+                mech: "-",
+                estimasi: "Menunggu Konfirmasi"
+            });
+
             document.getElementById('booking-code').innerText = code;
             openModal('modal-booking-success');
         }
+
+        // NEW: STATUS CHECK LOGIC
+        function handleStatusCheck(e) {
+            e.preventDefault();
+            const inputCode = document.getElementById('status-code-input').value.toUpperCase();
+            const resultDiv = document.getElementById('status-result');
+            const errorDiv = document.getElementById('status-error');
+            
+            const service = DB.activeServices.find(s => s.code === inputCode);
+
+            if(service) {
+                document.getElementById('result-status').innerText = service.status;
+                document.getElementById('result-name').innerText = service.name;
+                document.getElementById('result-motor').innerText = service.motor;
+                document.getElementById('result-mech').innerText = service.mech;
+                document.getElementById('result-est').innerText = service.estimasi;
+                
+                // Color Logic
+                const statusEl = document.getElementById('result-status');
+                if(service.status === 'Selesai') statusEl.className = "text-lg font-bold text-green-500 mb-3";
+                else if(service.status === 'Sedang Dikerjakan') statusEl.className = "text-lg font-bold text-blue-500 mb-3";
+                else statusEl.className = "text-lg font-bold text-accent mb-3";
+
+                resultDiv.classList.remove('hidden');
+                errorDiv.classList.add('hidden');
+            } else {
+                resultDiv.classList.add('hidden');
+                errorDiv.classList.remove('hidden');
+            }
+        }
         
         function sendBookingWA() {
-            window.open(`https://wa.me/?text=Halo Admin, Booking Service Baru.%0A%0AKode: ${bookingData.code}%0ANama: ${bookingData.name}%0AService: ${bookingData.srv}`, '_blank');
+            window.open(`https://wa.me/${WA_NUMBER}?text=Halo Admin, Booking Service Baru.%0A%0AKode: ${bookingData.code}%0ANama: ${bookingData.name}%0AService: ${bookingData.srv}`, '_blank');
         }
         function sendWA() {
             let msg = `*NOTA TRANSAKSI*%0A${new Date().toLocaleString()}%0A%0A`;
             cart.forEach(c=>msg+=`${c.name} (${c.qty}) = ${fmtRp(c.price*c.qty)}%0A`);
             msg+=`%0A*TOTAL: ${document.getElementById('receipt-total').innerText}*`;
-            window.open(`https://wa.me/?text=${msg}`,'_blank');
+            window.open(`https://wa.me/${WA_NUMBER}?text=${msg}`,'_blank');
         }
 
         function fmtRp(n) { return 'Rp ' + n.toLocaleString('id-ID'); }
